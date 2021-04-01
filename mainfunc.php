@@ -1,8 +1,8 @@
 <?php 
  /**
  * Get User Permission
- * @param int $id ó user's vk id
- * @param int $lvl ó compared value
+ * @param int $id ‚Äî user's vk id
+ * @param int $lvl ‚Äî compared value
  * @param object $vk - library
  * @return bool
  *
@@ -15,14 +15,14 @@ function isPermission($id, $lvl, $vk)
   if ($getdostyp >= $lvl) {
     return true;
   } else {
-    $vk->sendMessage($peer_id, "ƒ‡ÌÌ‡ˇ ÍÓÏ‡Ì‰‡ ‰ÓÒÚÛÔÌ‡ Ò " . $lvl . " ÛÓ‚Ìˇ ‰ÓÒÚÛÔ‡. ” ‚‡Ò: " . $getdostyp . ".");
+    $vk->sendMessage($peer_id, "–î–∞–Ω–Ω–∞—è –∫–æ–º–∞–Ω–¥–∞ –¥–æ—Å—Ç—É–ø–Ω–∞ —Å " . $lvl . " —É—Ä–æ–≤–Ω—è –¥–æ—Å—Ç—É–ø–∞. –£ –≤–∞—Å: " . $getdostyp . ".");
     return false;
   }
 }
 
 /**
  * Get User Permission
- * @param int $id ó user's vk id
+ * @param int $id ‚Äî user's vk id
  * @return int
  *
  */
@@ -40,9 +40,9 @@ function getPermission($id)
 
 /**
  * Cooldown between cmds or sending text
- * @param int $id ó user's vk id
- * @param object $vk ó library
- * @param int $peer_id ó user_id/conversation_id
+ * @param int $id ‚Äî user's vk id
+ * @param object $vk ‚Äî library
+ * @param int $peer_id ‚Äî user_id/conversation_id
  * @return bool
  *
  */
@@ -60,7 +60,7 @@ function timecmd($id,$vk,$peer_id)
     } else {
       $resultcd = $cd - $resultcd;
       
-      $vk->sendMessage($peer_id, "ÕÂ Ú‡Í ·˚ÒÚÓ,ˇ ÏÓ„Û ÔÂÂ„ÂÚ¸Òˇ!\nœÓ‰ÓÊ‰ËÚÂ Â˘Â $resultcd ". numberof($resultcd, 'ÒÂÍÛÌ', array('‰Û', '‰˚', '‰')) . ".");
+      $vk->sendMessage($peer_id, "–ù–µ —Ç–∞–∫ –±—ã—Å—Ç—Ä–æ,—è –º–æ–≥—É –ø–µ—Ä–µ–≥—Ä–µ—Ç—å—Å—è!\n–ü–æ–¥–æ–∂–¥–∏—Ç–µ –µ—â–µ $resultcd ". numberof($resultcd, '—Å–µ–∫—É–Ω', array('–¥—É', '–¥—ã', '–¥')) . ".");
       return false;
     }
   }
